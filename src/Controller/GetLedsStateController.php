@@ -14,6 +14,6 @@ class GetLedsStateController extends AbstractController
      */
     public function GetDeviceById(DevicesRepository $devicesRepository, $name)
     {
-        return $this->json($devicesRepository->findBy(array('name' => $name)),200,[]);
+        return $this->json($devicesRepository->findOneBy(array('name' => $name)),200,[]);
     }
 }
